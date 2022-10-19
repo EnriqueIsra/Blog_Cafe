@@ -5,6 +5,7 @@
     --primario: #784d3c;
     --blanco: #ffffff;
     --negros: #000000;
+    --grisClaro: #a5a5a5;
 }
 html {
     box-sizing: border-box;
@@ -120,3 +121,39 @@ img {
         column-gap: 4rem;
     }
 } 
+
+.entrada {
+    border-bottom: 3px solid var(--grisClaro);
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+/* CSS para los botones */
+.boton { /* css boton global */
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    transition: color .6s ease, font-size .6s ease, border-radius .6s ease;
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+} 
+.boton--primario {
+    background-color: var(--negros);
+}
+.boton--primario:hover {
+    font-size: 2rem;
+    border-radius: 2rem;
+    color: yellowgreen;
+}
