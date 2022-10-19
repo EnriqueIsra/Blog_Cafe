@@ -21,7 +21,7 @@ body {
 }
 /* CSS globales */
 .contenedor {
-    width: min(90%, 120rem);
+    width: min(85%, 120rem);
     margin: 0 auto;
 }
 a {
@@ -200,4 +200,16 @@ img {
 /* Textos */
 .t-justificado {
     text-align: justify;
+}
+
+/* Estilos a la página de nosotros */
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+} 
+.sobre-nosotros__texto {
+    line-height: 1.8;
 }
