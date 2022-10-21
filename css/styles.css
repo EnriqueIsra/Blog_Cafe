@@ -1,251 +1,305 @@
 :root {
-    --fuenteHeading: 'PT Sans', sans-serif;
-    --fuenteParrafos: 'Open Sans', sans-serif;
+  --fuenteHeading: "PT Sans", sans-serif;
+  --fuenteParrafos: "Open Sans", sans-serif;
 
-    --primario: #784d3c;
-    --blanco: #ffffff;
-    --negros: #000000;
-    --grisClaro: #a5a5a5;
+  --primario: #784d3c;
+  --blanco: #ffffff;
+  --negros: #000000;
+  --grisClaro: #a5a5a5;
+  --grisClaro1: #e7e7e7;
+  --grisOscuro: #5c5c5c;
 }
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; /* 1 rem = 10px */
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1 rem = 10px */
 }
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 body {
-    font-family: var(--fuenteParrafos);
-    font-size: 1.6rem;
-    line-height: 2;
+  font-family: var(--fuenteParrafos);
+  font-size: 1.6rem;
+  line-height: 2;
 }
 /* CSS globales */
 .contenedor {
-    width: min(85%, 120rem);
-    margin: 0 auto;
+  width: min(85%, 120rem);
+  margin: 0 auto;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-h1, h2, h3, h4 {
-    font-family: var(--fuenteHeading);
-    line-height: 1.2;
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuenteHeading);
+  line-height: 1.2;
 }
 h1 {
-    font-size: 4.8rem;
+  font-size: 4.8rem;
 }
 h2 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 h3 {
-    font-size: 3.2rem;
+  font-size: 3.2rem;
 }
 h4 {
-    font-size: 2.8rem;
+  font-size: 2.8rem;
 }
 p {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 /* Utilidades CSS */
 .no-margin {
-    margin: 0;
+  margin: 0;
 }
 .no-padding {
-    padding: 0;
+  padding: 0;
 }
 .centrar-texto {
-    text-align: center;
+  text-align: center;
 }
 /*  estilos al Header */
 .header {
-    background-image: url(../img/banner.jpg);
-    height: 60rem;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+  background-image: url(../img/banner.jpg);
+  height: 60rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .header__texto {
-    text-align: center;
-    color: var(--blanco);
-    margin-top: 5rem;
+  text-align: center;
+  color: var(--blanco);
+  margin-top: 5rem;
 }
 
 @media (min-width: 768px) {
-    .header__texto {
-        margin-top: 18rem;
-    }
-} 
+  .header__texto {
+    margin-top: 18rem;
+  }
+}
 .barra {
-    padding-top: 5rem;
+  padding-top: 5rem;
 }
 @media (min-width: 768px) {
-    .barra {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-} 
-.logo {
-    color: var(--blanco);
+  .barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
-.logo__nombre{
-    font-weight: normal;
+.logo {
+  color: var(--blanco);
+}
+.logo__nombre {
+  font-weight: normal;
 }
 .logo__bold {
-    font-weight: 1000;
+  font-weight: 1000;
 }
 @media (min-width: 768px) {
-    .navegacion {
-        display: flex;
-        gap: 2rem;
-    }
-} 
+  .navegacion {
+    display: flex;
+    gap: 2rem;
+  }
+}
 .navegacion__enlace {
-    font-size: 2rem;
-    color: var(--blanco);
-    display: block;
-    text-align: center;
-    transition: color .6s ease, font-size .6s ease, font-weight .6s ease;
+  font-size: 2rem;
+  color: var(--blanco);
+  display: block;
+  text-align: center;
+  transition: color 0.6s ease, font-size 0.6s ease, font-weight 0.6s ease;
 }
 .navegacion__enlace:hover {
-    color: yellowgreen;
-    font-size: 2.6rem;
-    font-weight: 800;
+  color: yellowgreen;
+  font-size: 2.6rem;
+  font-weight: 800;
 }
 
 @media (min-width: 768px) {
-    .contenido-principal {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        column-gap: 4rem;
-    }
-} 
+  .contenido-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+  }
+}
 
 .entrada {
-    border-bottom: 3px solid var(--grisClaro);
-    margin-bottom: 2rem;
+  border-bottom: 3px solid var(--grisClaro);
+  margin-bottom: 2rem;
 }
 .entrada:last-of-type {
-    border: none;
-    margin-bottom: 0;
+  border: none;
+  margin-bottom: 0;
 }
 
 /* CSS para los botones */
-.boton { /* css boton global */
-    display: block;
-    font-family: var(--fuenteHeading);
-    color: var(--blanco);
-    text-align: center;
-    padding: 1rem 3rem;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    transition: color .6s ease, font-size .6s ease, border-radius .6s ease;
+.boton {
+  /* css boton global */
+  display: block;
+  font-family: var(--fuenteHeading);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  transition: color 0.6s ease, font-size 0.6s ease, border-radius 0.6s ease;
+  border: none;
+}
+.boton:hover {
+  cursor: pointer;
 }
 @media (min-width: 768px) {
-    .boton {
-        display: inline-block;
-    }
-} 
-.boton--primario {
+  .boton {
+    display: inline-block;
+  }
+}
+.boton--enviar {
     background-color: var(--negros);
+  }
+  .boton--enviar:hover {
+    color: var(--negros);
+    border-color: var(--negros);
+    border-style: solid;
+    border-width: .1rem;
+    background-color: var(--blanco);
+    font-size: 2rem;
+    border-radius: 2rem;
+  }
+.boton--primario {
+  background-color: var(--negros);
 }
 .boton--primario:hover {
-    font-size: 2rem;
-    border-radius: 2rem;
-    color: yellowgreen;
+  font-size: 2rem;
+  border-radius: 2rem;
+  color: yellowgreen;
 }
 .boton--secundario {
-    background-color: var(--primario);
+  background-color: var(--primario);
 }
 .boton--secundario:hover {
-    font-size: 2rem;
-    border-radius: 2rem;
-    color: var(--negros);
+  font-size: 2rem;
+  border-radius: 2rem;
+  color: var(--negros);
 }
 
 /* CSS para el sidebar */
 .cursos {
-    list-style: none;
+  list-style: none;
 }
 .widget-curso {
-    border-bottom: 3px solid var(--grisClaro);
-    margin-bottom: 2rem;
+  border-bottom: 3px solid var(--grisClaro);
+  margin-bottom: 2rem;
 }
-.widget-curso:last-of-type{
-    border: none;
-    margin-bottom: 0;
+.widget-curso:last-of-type {
+  border: none;
+  margin-bottom: 0;
 }
 .widget-curso__label {
-    font-weight: 800;
-    font-family: var(--fuenteHeading);
+  font-weight: 800;
+  font-family: var(--fuenteHeading);
 }
 .widget-curso__info {
-    font-weight: normal;
+  font-weight: normal;
 }
 .widget-curso__info,
 .widget-curso__label {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 /* Estilos para el footer */
 .footer {
-    background-color: var(--negros);
-    padding-bottom: 5rem;
-    margin-top: 4rem;
+  background-color: var(--negros);
+  padding-bottom: 5rem;
+  margin-top: 4rem;
 }
 /* Textos */
 .t-justificado {
-    text-align: justify;
+  text-align: justify;
 }
 
 /* Estilos a la página de nosotros */
 @media (min-width: 768px) {
-    .sobre-nosotros {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 3rem;
-    }
-} 
+  .sobre-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+  }
+}
 .sobre-nosotros__texto {
-    line-height: 1.8;
+  line-height: 1.8;
 }
 
 /* css a la página de cursos */
 .curso {
-    padding: 3rem 0;
-    border-bottom: .5rem solid var(--grisClaro);
+  padding: 3rem 0;
+  border-bottom: 0.5rem solid var(--grisClaro);
 }
 @media (min-width: 768px) {
-    .curso {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        column-gap: 3rem;
-    }
-} 
+  .curso {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+  }
+}
 .curso:first-of-type {
-    border-top: .5rem solid var(--grisClaro);
+  border-top: 0.5rem solid var(--grisClaro);
 }
 .curso__label {
-    font-weight: 800;
-    font-family: var(--fuenteHeading);
+  font-weight: 800;
+  font-family: var(--fuenteHeading);
 }
 .curso__info {
-    font-weight: normal;
+  font-weight: normal;
 }
 .curso__info,
 .curso__label {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 /* CSS a la página de contacto */
-.contacto-bg{
-    background-image: url(../img/contacto.jpg);
-    height: 40rem;
-    background-size: cover;
-    background-repeat: no-repeat;
+.contacto-bg {
+  background-image: url(../img/contacto.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* CSS al formulario */
+.formulario {
+  margin: -12rem auto 0 auto;
+  background-color: var(--grisClaro1);
+  padding: 3rem;
+  width: 90%;
+}
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.campo__label {
+  flex: 0 0 9rem;
+  text-align: right;
+  padding-right: 2rem;
+}
+.campo__field {
+  flex: 1;
+  border-color: var(--grisClaro);
+  border-radius: 0.5rem;
+  padding-left: 1.5rem;
+  width: 10%;
+}
+.campo__field--textarea {
+  height: 10rem;
+}
+.campo__enviar {
+    justify-content: center;
 }
