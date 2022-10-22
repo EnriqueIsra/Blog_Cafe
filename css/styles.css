@@ -67,8 +67,13 @@ img {
   text-align: center;
 }
 /*  estilos al Header */
-.header {
+.webp .header{
+  background-image: url(../img/banner.webp);
+}
+.no-webp .header{
   background-image: url(../img/banner.jpg);
+}
+.header {
   height: 60rem;
   background-size: cover;
   background-position: center center;
@@ -98,12 +103,12 @@ img {
 .logo {
   color: var(--blanco);
 }
-.logo__nombre:hover{
+.logo__nombre:hover {
   font-size: 6rem;
 }
 .logo__nombre {
   font-weight: normal;
-  transition: font-size .6s ease;
+  transition: font-size 0.6s ease;
 }
 .logo__bold {
   font-weight: 1000;
@@ -168,17 +173,17 @@ img {
   }
 }
 .boton--enviar {
-    background-color: var(--negros);
-  }
-  .boton--enviar:hover {
-    color: var(--negros);
-    border-color: var(--negros);
-    border-style: solid;
-    border-width: .1rem;
-    background-color: var(--blanco);
-    font-size: 2rem;
-    border-radius: 2rem;
-  }
+  background-color: var(--negros);
+}
+.boton--enviar:hover {
+  color: var(--negros);
+  border-color: var(--negros);
+  border-style: solid;
+  border-width: 0.1rem;
+  background-color: var(--blanco);
+  font-size: 2rem;
+  border-radius: 2rem;
+}
 .boton--primario {
   background-color: var(--negros);
 }
@@ -305,5 +310,5 @@ img {
   height: 10rem;
 }
 .campo__enviar {
-    justify-content: center;
+  justify-content: center;
 }
