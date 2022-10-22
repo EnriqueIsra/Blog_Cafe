@@ -98,8 +98,12 @@ img {
 .logo {
   color: var(--blanco);
 }
+.logo__nombre:hover{
+  font-size: 6rem;
+}
 .logo__nombre {
   font-weight: normal;
+  transition: font-size .6s ease;
 }
 .logo__bold {
   font-weight: 1000;
